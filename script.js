@@ -3,6 +3,8 @@ const nextBtn = document.getElementById('next_btn'); //next question button
 const questionContainer = document.getElementById('question_container'); // question and answer
 const questionElement = document.getElementById('question'); //questions
 const answerBtns = document.getElementById('answer_buttons') //every answer button
+const wellDone = document.getElementById('well') //well done quote
+
 let shuffledQuestions,
     currentQuestionIndex
 
@@ -11,10 +13,12 @@ startBtn.addEventListener('click', startQuiz);
 nextBtn.addEventListener('click', () => {
     currentQuestionIndex++
     setNextQuestion()
+    wellDone.classList.remove('show')
 })
 
 function startQuiz() {
     startBtn.classList.add('hide');
+    nextBtn.classList.remove('hide');
     shuffledQuestions = questions.sort(() => Math.random() - .5)
     currentQuestionIndex = 0
     questionContainer.classList.remove('hide');
@@ -60,6 +64,7 @@ function selectAnswer(e) {
     } else {
         startBtn.innerText = 'restart'
         startBtn.classList.remove('hide')
+        wellDone.classList.remove('show')
     }
 }
 
@@ -67,6 +72,8 @@ function setStatusClass(element, correct) {
     clearStatusClass(element)
     if (correct) {
         element.classList.add('correct')
+        wellDone.classList.add('show')
+        
     } else {
         element.classList.add('wrong')
     }
