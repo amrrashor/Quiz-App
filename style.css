@@ -1,0 +1,89 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+*,
+*::after,
+*::before {
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+}
+
+body {
+    padding:0;
+    margin:0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width:100vw;
+    height:100vh;
+    background-color: #1a1a1a;
+}
+
+.container {
+    width:700px;
+    max-width: 90%;
+    background-color: rgba(33,37,41,0.8);
+    padding:20px;
+    border-radius: 15px;
+    box-shadow: 0 0 15px 3px;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(2, auto);
+    gap:15px;
+    margin:30px 0;
+}
+
+#question {
+    color:rgba(255, 255, 255, 0.92);
+    font-size:1.4rem;
+    padding:15px;
+    font-weight: bold;
+}
+
+.btn {
+    color:rgba(255, 255, 255, 0.92);
+    outline: none;
+    background-color: black;
+    border:none;
+    cursor: pointer;
+    padding:15px;
+    box-shadow: 0 0 5px 1px #000;
+    text-transform: capitalize;
+    font-size:1.2rem;
+    font-weight:600;
+    border-radius:5px;
+}
+
+.btn:hover {
+    background-color: rgba(255, 255, 255, 0.92);
+    color:#000;
+    transition: all 0.5s ease-out;
+    transform: scale(1.05);
+    box-shadow: none;
+}
+
+.btn.correct {
+    background-color: rgb(6, 177, 6);
+    color:rgba(255, 255, 255, 0.92);
+}
+
+.btn.wrong {
+    background-color: red;
+    color:rgba(255, 255, 255, 0.92);
+}
+
+.start_btn,
+.next_btn {
+    margin: 0 15px;
+}
+
+.controls {
+    display:flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.hide {
+    display: none;
+}
