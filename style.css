@@ -18,6 +18,13 @@ body {
     background-color: #1a1a1a;
 }
 
+body.correct {
+    background-color: aliceblue;
+}
+body.wrong {
+    background-color: red;
+}
+
 .container {
     width:700px;
     max-width: 90%;
