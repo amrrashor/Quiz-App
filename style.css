@@ -110,10 +110,12 @@ body {
     width:90%;
     margin:0 auto;
     opacity:0;
+    display:none;
 }
 
 .show {
     visibility: visible;
+    display:block;
     top:30px;
     left:0;
     right:0;
