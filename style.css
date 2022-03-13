@@ -101,7 +101,7 @@ body {
     color: rgba(255, 255, 255, 0.92);
     font-size:3rem;
     font-weight:600;
-    background-color:#000;
+    background-color: #111;
     padding:20px;
     text-align: center;
     transition: 0.5s;
@@ -109,17 +109,16 @@ body {
     top:0;
     width:90%;
     margin:0 auto;
-    display:none;
-    visibility: hidden;
+    opacity:0;
 }
 
 .show {
-    display: block;
     visibility: visible;
-    top:50px;
+    top:30px;
     left:0;
     right:0;
     width:50%;
     margin:0 auto;
     transition: 0.5s;
+    opacity:1;
 }
